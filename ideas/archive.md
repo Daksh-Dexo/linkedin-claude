@@ -8,7 +8,7 @@ Ideas that have been posted or killed. Keep them here for reference.
 
 | Idea | Date Posted | Notes |
 |------|-------------|-------|
-| — | — | — |
+| ROAS is not the starting point — it's the result of everything before it | Apr 14, 2026 | Carousel, 7 cards. Marketing Truth bucket. ID: urn:li:ugcPost:7449806173102379008 |
 
 ---
 

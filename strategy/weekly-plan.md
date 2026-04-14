@@ -31,7 +31,7 @@ Never post the same bucket two days in a row.
 
 | Day | Date | Bucket | Idea | Format | Status |
 |-----|------|--------|------|--------|--------|
-| Mon | Apr 14 | Agency Reality | What agencies promise in the pitch vs. what the first 90 days actually look like | Long-form | — |
+| Mon | Apr 14 | Marketing Truth | ROAS is not the starting point (funnel → volume vs. profitability → consistency first) | Carousel (7 cards) | posted |
 | Tue | Apr 15 | Marketing Truth | What ₹50K/month in ad spend actually buys vs. what founders think | Long-form | — |
 | Wed | Apr 16 | Brand Breakdown | The one creative format D2C brands keep recycling because it worked once in 2021 | Long-form | — |
 | Thu | Apr 17 | Operator Insight | The SOP that saved us when a senior person quit mid-campaign | Long-form | — |

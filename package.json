@@ -1,0 +1,13 @@
+{
+  "name": "linkedin-content",
+  "version": "1.0.0",
+  "description": "LinkedIn content system for Dexo Media",
+  "scripts": {
+    "generate": "node scripts/generate-images.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.44.0"
+  }
+}

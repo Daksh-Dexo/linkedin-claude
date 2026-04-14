@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{width:1080px;height:1080px;overflow:hidden;font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;}
+.slide{width:1080px;height:1080px;display:flex;flex-direction:column;overflow:hidden;position:relative;}
+.r{background:#D32F2F;}
+.slide-inner{padding:80px 70px;display:flex;flex-direction:column;height:100%;}
+.kicker{font-size:26px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;margin-bottom:20px;color:#FFCDD2;}
+.tag{display:inline-block;padding:8px 24px;border-radius:6px;font-size:24px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:36px;background:rgba(255,255,255,0.18);color:#fff;}
+.big{font-size:72px;font-weight:700;line-height:1.15;margin-bottom:10px;letter-spacing:-1px;color:#fff;}
+.accent-word{color:#FFCDD2;}
+.q-block{border-left:8px solid;padding:28px 34px;border-radius:0 10px 10px 0;margin:24px 0;}
+.q-block.wrong{border-color:rgba(255,255,255,0.4);background:rgba(0,0,0,0.18);}
+.q-block.right{border-color:#FFCDD2;background:rgba(255,255,255,0.18);}
+.ql{font-size:22px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;}
+.q-block.wrong .ql{color:#FFCDD2;}
+.q-block.right .ql{color:#fff;}
+.qt{font-size:34px;font-weight:600;line-height:1.35;color:#fff;}
+.slide-num{font-size:24px;font-weight:700;letter-spacing:0.12em;opacity:0.45;margin-top:auto;padding-top:40px;color:#fff;}
+.big-num{font-size:340px;font-weight:700;line-height:1;position:absolute;bottom:20px;right:40px;color:rgba(255,255,255,0.08);pointer-events:none;}
+</style></head><body>
+<div class="slide r">
+  <div class="slide-inner">
+    <div class="kicker">Ask better questions</div>
+    <div class="tag">Wrong vs right</div>
+    <div class="big">Stop asking the <span class="accent-word">wrong</span> question.</div>
+    <div class="q-block wrong">
+      <div class="ql">Wrong question</div>
+      <div class="qt">When will I become profitable?</div>
+    </div>
+    <div class="q-block right">
+      <div class="ql">Right question</div>
+      <div class="qt">When will my orders get consistent?</div>
+    </div>
+    <div class="slide-num">05 / 07</div>
+  </div>
+  <div class="big-num">05</div>
+</div>
+</body></html>

@@ -1,0 +1,219 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+.wrap{width:100%;padding:12px 0 4px;}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:#E24B4A #f0f0f0;}
+.track::-webkit-scrollbar{height:4px;}
+.track::-webkit-scrollbar-thumb{background:#E24B4A;border-radius:2px;}
+.slide{min-width:320px;max-width:320px;height:420px;border-radius:6px;scroll-snap-align:start;flex-shrink:0;display:flex;flex-direction:column;overflow:hidden;position:relative;}
+.r{background:#D32F2F;color:#fff;}
+.w{background:#fff;color:#111;border:2px solid #111;}
+.kicker{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;margin-bottom:8px;}
+.r .kicker{color:#FFCDD2;}
+.w .kicker{color:#D32F2F;}
+.big{font-size:36px;font-weight:700;line-height:1.1;margin-bottom:10px;}
+.r .big{color:#fff;}
+.w .big{color:#111;}
+.sub{font-size:13px;line-height:1.6;opacity:0.85;}
+.r .sub{color:#FFEBEE;}
+.w .sub{color:#333;}
+.accent-word{color:#D32F2F;}
+.w .accent-word{color:#D32F2F;}
+.r .accent-word{color:#FFCDD2;}
+.slide-inner{padding:28px 24px;display:flex;flex-direction:column;height:100%;}
+.slide-num{font-size:10px;font-weight:700;letter-spacing:0.12em;opacity:0.45;margin-top:auto;padding-top:16px;}
+.r .slide-num{color:#fff;}
+.w .slide-num{color:#111;}
+.big-num{font-size:72px;font-weight:700;line-height:1;color:rgba(255,255,255,0.15);position:absolute;bottom:16px;right:20px;font-variant-numeric:tabular-nums;}
+.w .big-num{color:rgba(0,0,0,0.05);}
+.tag{display:inline-block;padding:3px 10px;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;}
+.r .tag{background:rgba(255,255,255,0.18);color:#fff;}
+.w .tag{background:#D32F2F;color:#fff;}
+.divbar{width:36px;height:3px;margin:12px 0;}
+.r .divbar{background:rgba(255,255,255,0.4);}
+.w .divbar{background:#D32F2F;}
+.funnel-list{display:flex;flex-direction:column;gap:7px;margin-top:4px;}
+.funnel-item{display:flex;align-items:flex-start;gap:9px;}
+.dot{width:7px;height:7px;border-radius:50%;margin-top:4px;flex-shrink:0;}
+.r .dot{background:#FFCDD2;}
+.w .dot{background:#D32F2F;}
+.fi-text{font-size:12px;line-height:1.45;color:#FFEBEE;}
+.w .fi-text{color:#222;}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 0;}
+.ccard{border-radius:4px;padding:12px 10px;}
+.r .ccard{background:rgba(255,255,255,0.14);}
+.r .ccard.hi{background:rgba(255,255,255,0.28);}
+.w .ccard{background:#f5f5f5;}
+.w .ccard.hi{background:#D32F2F;}
+.roas-num{font-size:22px;font-weight:700;}
+.r .roas-num{color:#fff;}
+.w .ccard .roas-num{color:#111;}
+.w .ccard.hi .roas-num{color:#fff;}
+.spend-lbl{font-size:10px;margin-top:2px;opacity:0.7;}
+.r .spend-lbl{color:#FFCDD2;}
+.w .ccard .spend-lbl{color:#555;}
+.w .ccard.hi .spend-lbl{color:#FFCDD2;}
+.verdict{font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-top:8px;}
+.r .verdict{color:#FFCDD2;}
+.w .ccard .verdict{color:#555;}
+.w .ccard.hi .verdict{color:#fff;}
+.phase-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
+.pnum{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.r .pnum{background:rgba(255,255,255,0.2);color:#fff;}
+.w .pnum{background:#D32F2F;color:#fff;}
+.ph{font-size:13px;font-weight:700;}
+.r .ph{color:#fff;}
+.w .ph{color:#111;}
+.ps{font-size:11px;line-height:1.5;margin-top:2px;}
+.r .ps{color:#FFEBEE;}
+.w .ps{color:#555;}
+.q-block{border-left:3px solid;padding:10px 12px;border-radius:0 4px 4px 0;margin:8px 0;}
+.r .q-block{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.1);}
+.w .q-block{border-color:#D32F2F;background:#fff0f0;}
+.ql{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:3px;}
+.r .ql{color:#FFCDD2;}
+.w .ql{color:#D32F2F;}
+.qt{font-size:13px;font-weight:600;line-height:1.35;}
+.r .qt{color:#fff;}
+.w .qt{color:#111;}
+.cta-box{border-radius:4px;padding:14px;margin-top:12px;text-align:center;}
+.r .cta-box{background:rgba(255,255,255,0.16);}
+.w .cta-box{background:#D32F2F;}
+.cta-text{font-size:12px;font-weight:700;line-height:1.5;}
+.r .cta-text{color:#fff;}
+.w .cta-text{color:#fff;}
+</style>
+
+<h2 class="sr-only">LinkedIn carousel: Stop chasing ROAS — a 7-slide visual guide to funnel-first performance marketing</h2>
+
+<div class="wrap">
+<div class="track">
+
+<div class="slide r">
+  <div class="slide-inner">
+    <div class="kicker">Performance marketing</div>
+    <div class="tag">Hot take</div>
+    <div class="big">Your<br>ROAS is<br><span class="accent-word">lying</span><br>to you.</div>
+    <div class="divbar"></div>
+    <div class="sub">It's not a metric.<br>It's a result of everything else.</div>
+    <div class="slide-num">01 / 07 &nbsp;→ SWIPE</div>
+  </div>
+  <div class="big-num">01</div>
+</div>
+
+<div class="slide w">
+  <div class="slide-inner">
+    <div class="kicker">The funnel reality</div>
+    <div class="tag">How ROAS is made</div>
+    <div class="big" style="font-size:24px;line-height:1.2;">ROAS is the<br><span class="accent-word">output.</span><br>The funnel<br>is the input.</div>
+    <div class="funnel-list">
+      <div class="funnel-item"><div class="dot"></div><div class="fi-text" style="color:#222;">Strong CTR → better CPC</div></div>
+      <div class="funnel-item"><div class="dot"></div><div class="fi-text" style="color:#222;">Healthy CPC → more site traffic</div></div>
+      <div class="funnel-item"><div class="dot"></div><div class="fi-text" style="color:#222;">Good landing page → quality confirmed</div></div>
+      <div class="funnel-item"><div class="dot"></div><div class="fi-text" style="color:#222;">Strong add to cart → product trust</div></div>
+      <div class="funnel-item"><div class="dot"></div><div class="fi-text" style="color:#222;">Checkout initiation → no leaks</div></div>
+    </div>
+    <div class="slide-num">02 / 07</div>
+  </div>
+  <div class="big-num">02</div>
+</div>
+
+<div class="slide r">
+  <div class="slide-inner">
+    <div class="kicker">The math that fools founders</div>
+    <div class="tag">Reality check</div>
+    <div class="big" style="font-size:22px;line-height:1.2;">Which one<br>builds a<br><span class="accent-word">real</span><br>business?</div>
+    <div class="compare-grid">
+      <div class="ccard">
+        <div class="roas-num">5x</div>
+        <div class="spend-lbl">on ₹20,000</div>
+        <div class="verdict">Looks great</div>
+      </div>
+      <div class="ccard hi">
+        <div class="roas-num">2.2x</div>
+        <div class="spend-lbl">on ₹5,00,000</div>
+        <div class="verdict">THIS wins</div>
+      </div>
+    </div>
+    <div class="sub" style="font-size:11px;margin-top:10px;">High ROAS on tiny spend is vanity. Volume at sustainable margin is a business.</div>
+    <div class="slide-num">03 / 07</div>
+  </div>
+  <div class="big-num">03</div>
+</div>
+
+<div class="slide w">
+  <div class="slide-inner">
+    <div class="kicker">Mindset shift</div>
+    <div class="tag">Two different games</div>
+    <div class="big" style="font-size:26px;line-height:1.15;">Volume ≠<br><span class="accent-word">Profitability</span></div>
+    <div class="divbar"></div>
+    <div class="sub" style="margin-bottom:10px;">Most founders are playing one game while thinking they're playing the other.</div>
+    <div class="sub">Chasing a high ROAS on low spend keeps you small. Scaling volume at a sustainable margin builds something real.</div>
+    <div class="cta-box" style="background:#fff0f0;margin-top:auto;">
+      <div class="cta-text" style="color:#B71C1C;font-size:11px;">Know which game you're in — before you optimise.</div>
+    </div>
+    <div class="slide-num">04 / 07</div>
+  </div>
+  <div class="big-num">04</div>
+</div>
+
+<div class="slide r">
+  <div class="slide-inner">
+    <div class="kicker">Ask better questions</div>
+    <div class="tag">Wrong vs right</div>
+    <div class="big" style="font-size:22px;line-height:1.2;">Stop asking<br>the <span class="accent-word">wrong</span><br>question.</div>
+    <div class="q-block r" style="border-color:rgba(255,255,255,0.4);background:rgba(0,0,0,0.15);margin-top:10px;">
+      <div class="ql">Wrong question</div>
+      <div class="qt">When will I become profitable?</div>
+    </div>
+    <div class="q-block r" style="border-color:#FFCDD2;background:rgba(255,255,255,0.18);">
+      <div class="ql" style="color:#fff;">Right question</div>
+      <div class="qt">When will my orders get consistent?</div>
+    </div>
+    <div class="slide-num">05 / 07</div>
+  </div>
+  <div class="big-num">05</div>
+</div>
+
+<div class="slide w">
+  <div class="slide-inner">
+    <div class="kicker">The framework</div>
+    <div class="tag">2-phase approach</div>
+    <div class="big" style="font-size:24px;line-height:1.2;">Sequence<br>beats<br><span class="accent-word">speed.</span></div>
+    <div class="divbar"></div>
+    <div class="phase-row">
+      <div class="pnum">1</div>
+      <div>
+        <div class="ph">Find your baseline</div>
+        <div class="ps">Exit instability. Reach predictable, consistent order volume. Don't optimise yet.</div>
+      </div>
+    </div>
+    <div class="phase-row">
+      <div class="pnum">2</div>
+      <div>
+        <div class="ph">Then optimise profit</div>
+        <div class="ps">Once orders are consistent — now you work on margin, ROAS, and efficient scaling.</div>
+      </div>
+    </div>
+    <div class="slide-num">06 / 07</div>
+  </div>
+  <div class="big-num">06</div>
+</div>
+
+<div class="slide r">
+  <div class="slide-inner" style="justify-content:center;align-items:center;text-align:center;">
+    <div class="kicker" style="text-align:center;">The takeaway</div>
+    <div class="big" style="font-size:22px;line-height:1.25;text-align:center;">The best agencies don't promise better <span class="accent-word">numbers.</span></div>
+    <div class="divbar" style="margin:14px auto;"></div>
+    <div class="sub" style="text-align:center;">They ask better questions.</div>
+    <div class="cta-box" style="width:100%;margin-top:20px;">
+      <div class="cta-text" style="font-size:12px;">If your agency only talks ROAS — you're missing the full picture.</div>
+    </div>
+    <div class="slide-num" style="margin-top:20px;text-align:center;">07 / 07 — Follow for more</div>
+  </div>
+  <div class="big-num">07</div>
+</div>
+
+</div>
+<div style="font-size:11px;color:#999;margin-top:4px;padding-left:2px;">← Scroll through all 7 slides →</div>
+</div>

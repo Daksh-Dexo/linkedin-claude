@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--
+  CARD TEMPLATE — Dexo Media LinkedIn Carousel
+  ─────────────────────────────────────────────
+  Size: 1080x1080px (LinkedIn square carousel)
+  Two variants: class="slide r" (red bg) / class="slide w" (white bg)
+
+  ELEMENTS AVAILABLE:
+    .kicker      — small label at top (e.g. "Performance marketing")
+    .tag         — pill badge (e.g. "Hot take")
+    .big         — headline. Use <span class="accent-word"> for red accent.
+    .divbar      — thin horizontal rule
+    .sub         — body text
+    .slide-num   — bottom left "01 / 07 → SWIPE"
+    .big-num     — watermark number bottom right (set manually)
+
+  SPECIAL BLOCKS:
+    .funnel-list > .funnel-item > .dot + .fi-text
+    .compare-grid > .ccard (.hi for highlighted)
+      .roas-num / .spend-lbl / .verdict
+    .phase-row > .pnum + div > .ph + .ps
+    .q-block > .ql + .qt
+    .cta-box > .cta-text
+
+  COLORS:
+    Red:   #D32F2F (primary), #FFCDD2 (light), #FFEBEE (very light)
+    White: #ffffff
+    Dark:  #111111
+
+  TO USE: Copy this file, change class="slide r" or "slide w", fill content.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 1080px;
+  height: 1080px;
+  overflow: hidden;
+  font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.slide {
+  width: 1080px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.r { background: #D32F2F; color: #fff; }
+.w { background: #fff; color: #111; border: 5px solid #111; }
+
+.slide-inner {
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Kicker */
+.kicker {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.r .kicker { color: #FFCDD2; }
+.w .kicker { color: #D32F2F; }
+
+/* Tag pill */
+.tag {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+.r .tag { background: rgba(255,255,255,0.18); color: #fff; }
+.w .tag { background: #D32F2F; color: #fff; }
+
+/* Headline */
+.big {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 28px;
+  letter-spacing: -1px;
+}
+.r .big { color: #fff; }
+.w .big { color: #111; }
+
+.accent-word { color: #D32F2F; }
+.r .accent-word { color: #FFCDD2; }
+.w .accent-word { color: #D32F2F; }
+
+/* Divider bar */
+.divbar {
+  width: 100px;
+  height: 8px;
+  margin: 32px 0;
+}
+.r .divbar { background: rgba(255,255,255,0.4); }
+.w .divbar { background: #D32F2F; }
+
+/* Body text */
+.sub {
+  font-size: 34px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+.r .sub { color: #FFEBEE; }
+.w .sub { color: #333; }
+
+/* Slide number */
+.slide-num {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.45;
+  margin-top: auto;
+  padding-top: 40px;
+}
+.r .slide-num { color: #fff; }
+.w .slide-num { color: #111; }
+
+/* Watermark number */
+.big-num {
+  font-size: 340px;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.r .big-num { color: rgba(255,255,255,0.08); }
+.w .big-num { color: rgba(0,0,0,0.04); }
+
+/* Funnel list */
+.funnel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+.funnel-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+.r .dot { background: #FFCDD2; }
+.w .dot { background: #D32F2F; }
+.fi-text { font-size: 30px; line-height: 1.45; }
+.r .fi-text { color: #FFEBEE; }
+.w .fi-text { color: #222; }
+
+/* Compare grid */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 32px 0 0;
+}
+.ccard {
+  border-radius: 12px;
+  padding: 34px 28px;
+}
+.r .ccard { background: rgba(255,255,255,0.14); }
+.r .ccard.hi { background: rgba(255,255,255,0.28); }
+.w .ccard { background: #f5f5f5; }
+.w .ccard.hi { background: #D32F2F; }
+
+.roas-num { font-size: 64px; font-weight: 700; }
+.r .roas-num { color: #fff; }
+.w .ccard .roas-num { color: #111; }
+.w .ccard.hi .roas-num { color: #fff; }
+
+.spend-lbl { font-size: 26px; margin-top: 6px; opacity: 0.7; }
+.r .spend-lbl { color: #FFCDD2; }
+.w .ccard .spend-lbl { color: #555; }
+.w .ccard.hi .spend-lbl { color: #FFCDD2; }
+
+.verdict {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.r .verdict { color: #FFCDD2; }
+.w .ccard .verdict { color: #555; }
+.w .ccard.hi .verdict { color: #fff; }
+
+/* Phase rows */
+.phase-row {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-bottom: 34px;
+}
+.pnum {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.r .pnum { background: rgba(255,255,255,0.2); color: #fff; }
+.w .pnum { background: #D32F2F; color: #fff; }
+
+.ph { font-size: 36px; font-weight: 700; }
+.r .ph { color: #fff; }
+.w .ph { color: #111; }
+
+.ps { font-size: 28px; line-height: 1.5; margin-top: 6px; }
+.r .ps { color: #FFEBEE; }
+.w .ps { color: #555; }
+
+/* Quote block */
+.q-block {
+  border-left: 8px solid;
+  padding: 26px 32px;
+  border-radius: 0 10px 10px 0;
+  margin: 22px 0;
+}
+.r .q-block { border-color: rgba(255,255,255,0.5); background: rgba(0,0,0,0.15); }
+.w .q-block { border-color: #D32F2F; background: #fff0f0; }
+
+.ql {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.r .ql { color: #FFCDD2; }
+.w .ql { color: #D32F2F; }
+
+.qt { font-size: 32px; font-weight: 600; line-height: 1.35; }
+.r .qt { color: #fff; }
+.w .qt { color: #111; }
+
+/* CTA box */
+.cta-box {
+  border-radius: 10px;
+  padding: 38px;
+  margin-top: 32px;
+  text-align: center;
+}
+.r .cta-box { background: rgba(255,255,255,0.16); }
+.w .cta-box { background: #D32F2F; }
+
+.cta-text { font-size: 30px; font-weight: 700; line-height: 1.5; }
+.r .cta-text { color: #fff; }
+.w .cta-text { color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- SWAP class="slide r" ↔ class="slide w" -->
+<div class="slide r">
+  <div class="slide-inner">
+
+    <div class="kicker">Your kicker here</div>
+    <div class="tag">Tag label</div>
+    <div class="big">Your big<br>headline <span class="accent-word">here.</span></div>
+    <div class="divbar"></div>
+    <div class="sub">Supporting text goes here.</div>
+    <div class="slide-num">01 / 07 &nbsp;→ SWIPE</div>
+
+  </div>
+  <div class="big-num">01</div>
+</div>
+
+</body>
+</html>
